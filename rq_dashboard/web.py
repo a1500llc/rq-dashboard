@@ -210,12 +210,6 @@ def favicon():
         mimetype="image/vnd.microsoft.icon",
     )
 
-
-@blueprint.route("/check.txt")
-def check():
-    return 'OK'
-
-
 def get_queue_registry_jobs_count(queue_name, registry_name, offset, per_page):
     queue = Queue(queue_name)
     if registry_name != "queued":
